@@ -1,8 +1,15 @@
-const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+import { v4 as uuidv4 } from 'uuid';
 
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-export default (state = [], action) => {
+const initialState = [
+  { id: uuidv4(), title: 'Into the badLands', author: 'Sunny Widow' },
+  { id: uuidv4(), title: 'Doctor Strange', author: 'John Doe' },
+  { id: uuidv4(), title: 'Programming', author: 'Microverse' },
+];
+
+export default (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.book];
