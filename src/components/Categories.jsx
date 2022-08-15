@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { checkStatusBook } from '../redux/categories/categories';
 
 function Categories() {
-  const alert = useSelector((state) => state.categories);
+  const status = useSelector((state) => state.categories);
   const dispatch = useDispatch();
 
   const statusChecker = () => {
@@ -13,7 +13,7 @@ function Categories() {
       <button onClick={statusChecker} type="button">
         Check status
       </button>
-      <h4>{alert}</h4>
+      <h4>{status}</h4>
     </div>
   );
 }

@@ -6,39 +6,39 @@ import { addBOOK } from '../redux/books/books';
 function AddBooks() {
   const dispatch = useDispatch();
 
-  const [formStates, setFormStates] = useState({ title: '', author: '' });
+  const [form, setForm] = useState({ title: '', author: '' });
 
   const changeState = (e) => {
     e.preventDefault();
-    setFormStates({ ...formStates, [e.target.name]: e.target.value });
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const bookState = (e) => {
+  const showState = (e) => {
     e.preventDefault();
-    if (!formStates.title.trim() || !formStates.author.trim()) return;
+    if (!form.title.trim() || !form.author.trim()) return;
     const book = {
       id: uuidv4(),
-      title: formStates.title,
-      author: formStates.author,
+      title: form.title,
+      author: form.author,
     };
     dispatch(addBOOK(book));
-    setFormStates({ title: '', author: '' });
+    setForm({ title: '', author: '' });
   };
 
   return (
     <div className="hero">
       <h3>ADD NEW BOOK</h3>
-      <form onSubmit={bookState}>
+      <form onSubmit={showState}>
         <input
           type="text"
-          value={formStates.title}
+          value={form.title}
           onChange={changeState}
           placeholder="Book Title"
           name="title"
         />
         <input
           type="text"
-          value={formStates.author}
+          value={form.author}
           onChange={changeState}
           placeholder="Book Author"
           name="author"
