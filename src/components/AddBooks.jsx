@@ -1,46 +1,60 @@
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { addBOOK } from '../redux/books/books';
+import { addBook } from '../redux/books/books';
 
-function AddBooks() {
+export default function AddBook() {
   const dispatch = useDispatch();
 
-  const [form, setForm] = useState({ title: '', author: '' });
+  const [bookValues, setBookValues] = useState({
+    title: '',
+    author: '',
+  });
 
-  const changeState = (e) => {
+  const handleChange = (e) => {
     e.preventDefault();
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setBookValues({
+      ...bookValues,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const showState = (e) => {
+  const addBookHandler = (e) => {
     e.preventDefault();
-    if (!form.title.trim() || !form.author.trim()) return;
+    const title = document.getElementsByName('title')[0].value;
+    const author = document.getElementsByName('author')[0].value;
+
+    if (!title.length > 0 || !author.length > 0) return;
     const book = {
+      title: bookValues.title,
+      author: bookValues.author,
       id: uuidv4(),
-      title: form.title,
-      author: form.author,
     };
-    dispatch(addBOOK(book));
-    setForm({ title: '', author: '' });
-  };
 
+    dispatch(addBook(book));
+    setBookValues({
+      title: '',
+      author: '',
+    });
+  };
   return (
-    <div className="hero">
-      <h3>ADD NEW BOOK</h3>
-      <form onSubmit={showState}>
+    <div>
+      <h1>ADD NEW BOOK</h1>
+      <form onSubmit={addBookHandler}>
         <input
           type="text"
-          value={form.title}
-          onChange={changeState}
-          placeholder="Book Title"
+          required
+          value={bookValues.title}
+          onChange={handleChange}
+          placeholder="Book title"
           name="title"
         />
         <input
           type="text"
-          value={form.author}
-          onChange={changeState}
-          placeholder="Book Author"
+          required
+          value={bookValues.author}
+          onChange={handleChange}
+          placeholder="Book author"
           name="author"
         />
         <button type="submit">ADD BOOK</button>
@@ -48,5 +62,3 @@ function AddBooks() {
     </div>
   );
 }
-
-export default AddBooks;
