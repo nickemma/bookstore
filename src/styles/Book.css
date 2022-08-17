@@ -1,6 +1,5 @@
 .book {
   padding: 2rem 10%;
-  margin-bottom: 2rem;
 }
 
 .book-info {
@@ -32,6 +31,8 @@
   background: transparent;
   color: #85a7c5;
   margin-right: 10px;
+  font-size: 1.7rem;
+  cursor: pointer;
 }
 
 .divider {

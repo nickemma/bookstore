@@ -17,11 +17,11 @@ function Book(props) {
         <h3 className="author">{author}</h3>
         <div className="btn-control">
           <button type="button">Comment</button>
-          <div className="divider"></div>
+          <div className="divider" />
           <button type="button" onClick={bookRemove}>
             Remove
           </button>
-          <div className="divider"></div>
+          <div className="divider" />
           <button type="button">Edit</button>
         </div>
       </div>
