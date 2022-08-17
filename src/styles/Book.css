@@ -1,0 +1,42 @@
+.book {
+  padding: 2rem 10%;
+  margin-bottom: 2rem;
+}
+
+.book-info {
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  padding: 4rem 3rem;
+}
+
+.title {
+  color: #121212;
+  letter-spacing: -0.5px;
+  font-size: 3rem;
+}
+
+.author {
+  color: #85a7c5;
+  font-weight: 100;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-control {
+  display: flex;
+  align-items: center;
+}
+
+.btn-control button {
+  border: none;
+  background: transparent;
+  color: #85a7c5;
+  margin-right: 10px;
+}
+
+.divider {
+  width: 2px;
+  height: 25px;
+  background: #e8e8e8;
+  margin-right: 10px;
+}

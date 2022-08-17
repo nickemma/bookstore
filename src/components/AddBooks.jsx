@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
+import '../styles/AddBooks.css';
 
 export default function AddBook() {
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ export default function AddBook() {
     });
   };
   return (
-    <div>
+    <div className="add-book">
       <h1>ADD NEW BOOK</h1>
       <form onSubmit={addBookHandler}>
         <input
@@ -57,7 +58,9 @@ export default function AddBook() {
           placeholder="Book author"
           name="author"
         />
-        <button type="submit">ADD BOOK</button>
+        <button type="submit" className="add-btn">
+          ADD BOOK
+        </button>
       </form>
     </div>
   );
