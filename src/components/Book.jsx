@@ -1,11 +1,13 @@
 import { useDispatch } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import { removeBook } from '../redux/books/books';
+import ProgressBar from './ProgressBar';
+import Chapter from './Chapter';
 import '../styles/Book.css';
 
 function Book(props) {
   const dispatch = useDispatch();
-  const { id, title, author } = props;
+  const { id, title, author, category } = props;
 
   const bookRemove = () => {
     dispatch(removeBook(id));
@@ -13,6 +15,7 @@ function Book(props) {
   return (
     <div className="book">
       <div className="book-info">
+        <p className="cate">{category}</p>
         <h2 className="title">{title}</h2>
         <h3 className="author">{author}</h3>
         <div className="btn-control">
@@ -25,6 +28,10 @@ function Book(props) {
           <button type="button">Edit</button>
         </div>
       </div>
+      <div className="chapter">
+        <ProgressBar limit={limit} />
+        <Chapter />
+      </div>
     </div>
   );
 }
@@ -33,6 +40,7 @@ Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
