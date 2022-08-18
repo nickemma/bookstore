@@ -5,7 +5,7 @@
 .book-info {
   border: 1px solid #e8e8e8;
   background: #fff;
-  padding: 4rem 3rem;
+  padding: 2.5rem 1.5rem;
 }
 
 .title {
@@ -17,7 +17,7 @@
 .author {
   color: #85a7c5;
   font-weight: 100;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 
