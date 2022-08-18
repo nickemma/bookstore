@@ -74,7 +74,7 @@ export default function AddBook() {
             <option value="fiction"> Fiction </option>
             <option value="action"> Action </option>
             <option value="suspense"> Suspense </option>
-            <option value="romance"> Romance </option>
+            <option value="romance"> Computer Programming </option>
             <option value="adventure"> Adventure </option>
             <option value="sci-fi"> Science Fiction </option>
             <option value="history"> History </option>

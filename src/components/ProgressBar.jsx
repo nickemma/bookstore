@@ -53,7 +53,10 @@ const ProgressBar = (props) => {
         </div>
       </div>
       <div className="status-number">
-        <p className="number">{limit}%</p>
+        <p className="number">
+          {limit}
+          %
+        </p>
         <p className="status"> Completed </p>
       </div>
     </div>

@@ -42,7 +42,7 @@ form input {
 }
 
 @media (max-width: 600px) {
-  form input {
+  form input #category-select {
     margin-bottom: 20px;
     width: 100%;
   }
