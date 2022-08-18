@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import '../styles/ProgressBar.css';
 
 const ProgressBar = (props) => {
   const [count, setCount] = useState(0);
@@ -52,7 +53,7 @@ const ProgressBar = (props) => {
         </div>
       </div>
       <div className="status-number">
-        <p className="number">{count}%</p>
+        <p className="number">{limit}%</p>
         <p className="status"> Completed </p>
       </div>
     </div>

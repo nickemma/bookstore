@@ -18,6 +18,16 @@ form input {
   height: 5rem;
 }
 
+#category-select {
+  font-size: 1.8rem;
+  padding: 10px;
+  border: 2px solid #918f8f;
+  border-radius: 1rem;
+  margin-left: 10px;
+  width: 25%;
+  height: 5rem;
+}
+
 .add-btn {
   border: none;
   background: #0290ff;

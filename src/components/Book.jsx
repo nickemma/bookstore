@@ -7,6 +7,7 @@ import '../styles/Book.css';
 
 function Book(props) {
   const dispatch = useDispatch();
+  const limit = Math.floor(Math.random() * 100);
   const { id, title, author, category } = props;
 
   const bookRemove = () => {
@@ -14,23 +15,25 @@ function Book(props) {
   };
   return (
     <div className="book">
-      <div className="book-info">
-        <p className="cate">{category}</p>
-        <h2 className="title">{title}</h2>
-        <h3 className="author">{author}</h3>
-        <div className="btn-control">
-          <button type="button">Comment</button>
-          <div className="divider" />
-          <button type="button" onClick={bookRemove}>
-            Remove
-          </button>
-          <div className="divider" />
-          <button type="button">Edit</button>
+      <div className="book-container">
+        <div className="book-info">
+          <p className="cate">{category}</p>
+          <h2 className="title">{title}</h2>
+          <h3 className="author">{author}</h3>
+          <div className="btn-control">
+            <button type="button">Comment</button>
+            <div className="divider" />
+            <button type="button" onClick={bookRemove}>
+              Remove
+            </button>
+            <div className="divider" />
+            <button type="button">Edit</button>
+          </div>
         </div>
-      </div>
-      <div className="chapter">
-        <ProgressBar limit={limit} />
-        <Chapter />
+        <div className="chapter">
+          <ProgressBar limit={limit} />
+          <Chapter />
+        </div>
       </div>
     </div>
   );
