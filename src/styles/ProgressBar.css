@@ -34,15 +34,18 @@
   background: #307bbe;
   background: linear-gradient(#379cf6, #307bbe);
 }
+
+.progress {
+  background: linear-gradient(#307bbe, #379cf6);
+}
+
 .circle .left .progress {
   z-index: 1;
 }
+
 .circle .right {
   transform: rotate(180deg);
   z-index: 2;
-}
-.progress {
-  background: linear-gradient(#307bbe, #379cf6);
 }
 
 .status-number {
@@ -53,11 +56,13 @@
   font-size: 3.5rem;
   margin-bottom: 5px;
 }
+
 .status {
   color: #121212;
   opacity: 0.5;
   font-size: 2rem;
 }
+
 .chapter-progress {
   display: flex;
   align-items: center;
