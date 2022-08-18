@@ -6,7 +6,6 @@ BookStore CMS
 
 The Bookstore is a website where the user can display a list of books, add a book by providing a title, an author, and selecting from the categories, and remove a selected book.
 
-
 The pull request is opened to get a review on the project and check for any required changes.
 
 ## Built With
@@ -58,7 +57,7 @@ $ npm start to run the local server
 
 ## Click here for live version
 
-- live demo: [coming soon]()
+- live demo: [Live](https://microverse-bookstore.netlify.app/)
 
 ## Authors
 
