@@ -24,9 +24,9 @@ export default function books(state = initialState, action) {
 export const addBook = createAsyncThunk(ADD_BOOK, async (book) => {
   await axios.post(`${API_URL}/books`, {
     item_id: book.id,
+    category: book.category,
     title: book.title,
     author: book.author,
-    category: 'Not Available',
   });
   return {
     book: [
@@ -35,7 +35,7 @@ export const addBook = createAsyncThunk(ADD_BOOK, async (book) => {
         {
           author: book.author,
           title: book.title,
-          category: 'Not Available',
+          category: book.category,
         },
       ],
     ],
