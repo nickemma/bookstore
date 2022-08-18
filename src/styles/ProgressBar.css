@@ -25,6 +25,10 @@
   margin: -3.4rem 0 0 -3.4rem;
 }
 
+.progress {
+  background: linear-gradient(#307bbe, #379cf6);
+}
+
 .circle .bar .progress {
   position: absolute;
   height: 100%;
@@ -33,10 +37,6 @@
   clip: rect(0, 4rem, 8rem, 0);
   background: #307bbe;
   background: linear-gradient(#379cf6, #307bbe);
-}
-
-.progress {
-  background: linear-gradient(#307bbe, #379cf6);
 }
 
 .circle .left .progress {
