@@ -8,7 +8,9 @@ import '../styles/Book.css';
 function Book(props) {
   const dispatch = useDispatch();
   const limit = Math.floor(Math.random() * 100);
-  const { id, title, author, category } = props;
+  const {
+    id, title, author, category,
+  } = props;
 
   const bookRemove = () => {
     dispatch(removeBook(id));
